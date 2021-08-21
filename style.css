@@ -1,0 +1,245 @@
+/* SHREE GANESH */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: 'Exo2', sans-serif;
+}
+
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#header{
+    width: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 40rem;
+    padding: 1rem 4rem;
+    background: #fff;
+    box-shadow: 0 .1rem .3rem #999;
+    z-index: 1100;
+}
+#header nav ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 0;
+}
+#header nav ul li{
+    margin-right: 2rem;
+}
+#header nav ul li a{
+    color:#333;
+    font-size: 2rem;
+}
+#header nav ul li a:hover{
+    text-decoration: none;
+    color: #00B894;
+}
+#header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+/* HOME CONTENT START */
+#home{
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-animation: chang 10s alternate infinite;
+    animation: chang 10s alternate infinite;
+}
+#home .content{
+    position: relative;
+}
+#home .content h1{
+    /* margin-top: 10rem; */
+    font-size: 6rem;
+    color: #00B894;
+}
+#home .content h2{
+    margin-top: 1rem;
+    font-size: 5rem;
+    color: #00B894;
+}
+#home .content h3{
+    font-size: 3rem;
+    color: #333;
+    margin: 1rem 0;
+}
+#home .content button{
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background: #00B894;
+    color: #fff;
+    cursor: pointer;
+    height: 4rem;
+    width: 18rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+#home .content button:hover{
+    background: #333;
+}
+#home .content .icons{
+    position: absolute;
+    left: 2rem;
+    bottom:-65%;
+    width: 100%;
+}
+#home .content .icons a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: #00B894;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    margin-right: 1.5rem;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#home .content .icons a:hover{
+    text-decoration: none;
+    background: #333;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+#home1{
+    margin-left: 20rem;
+    margin-top: 20rem;
+    align-items: center;
+}
+/* HOME CONTENT END*/
+
+@-webkit-keyframes chang{
+    0%,100%{
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home1.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    25% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home2.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    50% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home3.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    75% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home4.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+@keyframes chang{
+    0%,100%{
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home1.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    25% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home2.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    50% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home3.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    75% {
+        background: linear-gradient(76.34deg, #FFFFFF 52.45%,rgba(196,196,196,0) 52.49%) , url("./images/home4.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width:768px)
+{
+    html{
+        font-size: 50%;
+    }
+    #header .fa-bars{
+        display: block;
+    }
+    #header nav{
+        position: fixed;
+        top:-120%;
+        left:0;
+        height: calc(100vh-5rem);
+        width: 100vw;
+        background: #fff;
+    }
+    #header nav ul{
+        height:100%;
+        -webkit-box-orient: normal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: normal;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    #header nav ul li{
+        margin: 2rem 0;
+    }
+    #header nav ul li a{
+        font-size: 3rem;
+    }
+    #header .nav-toggle{
+        top: 5.6rem;
+    }
+    #home{
+        -webkit-animation: none;
+        animation: none;
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rbga(255,255,255,0.8))),url() no-repeat;
+        background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url() no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    #home .content{
+        text-shadow: .1rem .1rem .3rem #333;
+    }
+    #home .content .icons{
+        left:50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+}
